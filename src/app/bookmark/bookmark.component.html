@@ -1,0 +1,19 @@
+ <mat-card class="example-card">
+   <a href="#" (click)="open()">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{pages?.title}}</mat-card-title>
+      <mat-card-subtitle>{{pages?.sub}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="pages?.source" class="image" alt="Photo of the bookmark">
+    <mat-card-content>
+      <p>
+        {{pages?.description}}
+      </p>
+    </mat-card-content>
+    </a>
+    <mat-card-actions (click)="openDialog()">
+      <button mat-button>Remove</button>
+    </mat-card-actions>
+  </mat-card>
+

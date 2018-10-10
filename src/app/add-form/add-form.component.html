@@ -1,0 +1,29 @@
+<div class="margin">
+  <div mat-dialog-content>
+    <form class="example-form" (ngSubmit)="add()">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Bookmark Title" type="text" required [(ngModel)]="page.title" name="title">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Bookmark subtitle" type="text" required [(ngModel)]="page.sub" name="sub">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Bookmark description" type="text" required [(ngModel)]="page.description" name="description"></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="https://www.bookmark.com" type="text" required [(ngModel)]="page.url" name="url">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="https://www.link.to.image" type="text" required [(ngModel)]="page.source" name="source">
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Save</button>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <br>
+    <button mat-raised-button class="close" [routerLink]="['/']" color="warn">Cancel</button>
+  </div>
+
+  <dash-bookmark [pages]="page">
+  </dash-bookmark>
+</div>
